@@ -1,0 +1,5 @@
+<mapper namespace="com.southwind.repository.UserRepository">
+    <select id="login" resultType="User">
+        select * from t_user where username = #{param1} and password = #{param2}
+    </select>
+</mapper>
