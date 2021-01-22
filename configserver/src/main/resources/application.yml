@@ -1,12 +1,10 @@
 server:
   port: 8888
+
 spring:
   application:
     name: configserver
   cloud:
-    bus:
-      trace:
-        enable: true
     config:
       server:
         git:
@@ -15,7 +13,11 @@ spring:
           username: mingminghua #Git 仓库用户名
           password: huamingming12 #Git 仓库密码
       label: master #仓库的分支
+    bus:
+      trace:
+        enable: true
 eureka:
   client:
+    register-with-eureka: true
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
