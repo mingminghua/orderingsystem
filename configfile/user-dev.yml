@@ -16,6 +16,6 @@ eureka:
     prefer-ip-address: true
 mybatis:
   mapper-locations: classpath:mapping/*.xml
-  type-aliases-package: com.southwind.entity
+  type-aliases-package: com.sourthwind.entity
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
