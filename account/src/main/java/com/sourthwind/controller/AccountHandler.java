@@ -1,6 +1,7 @@
 package com.sourthwind.controller;
 
 import com.sourthwind.entity.Account;
+import com.sourthwind.entity.Admin;
 import com.sourthwind.repository.AdminRepository;
 import com.sourthwind.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,6 +9,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @Description
@@ -35,5 +39,17 @@ public class AccountHandler {
                 break;
         }
         return account;
+    }
+
+    @GetMapping("/getAll")
+    public List<Account> getAll(){
+        List<Account> result = new ArrayList<Account>();
+        List<Admin> tempResult = adminRepository.getAll();
+        Account account = null;
+        for(Admin admin : tempResult){
+            account = (Account) admin;
+            result.add(account);
+        }
+        return result;
     }
 }
