@@ -15,6 +15,7 @@
         <module>menu</module>
         <module>order</module>
         <module>user</module>
+        <module>clientfeign</module>
     </modules>
 
     <properties>
