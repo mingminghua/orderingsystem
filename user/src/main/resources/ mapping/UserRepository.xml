@@ -5,9 +5,10 @@
         select * from t_user order by id limit #{param1},#{param2}
     </select>
 
-    <select id="count" resultType="int">
+    <select id="count" resultType="java.lang.Integer">
         select count(*) from t_user;
     </select>
+
 
     <insert id="save" parameterType="com.sourthwind.entity.User">
         insert into t_user(username,password,nickname,gender,telephone,registerdate,address) values(#{username},#{password},#{nickname},#{gender},#{telephone},#{registerdate},#{address})
