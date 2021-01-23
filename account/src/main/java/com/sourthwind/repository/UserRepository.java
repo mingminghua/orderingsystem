@@ -1,6 +1,7 @@
 package com.sourthwind.repository;
 
 import com.sourthwind.entity.User;
+import org.apache.ibatis.annotations.Param;
 
 /**
  * @Description
@@ -8,5 +9,5 @@ import com.sourthwind.entity.User;
  * @create 2021-01-20 18:29
  */
 public interface UserRepository {
-    public User login(String username, String password);
+    public User login(@Param("username") String username, @Param("password") String password);
 }

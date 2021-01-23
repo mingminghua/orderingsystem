@@ -1,6 +1,7 @@
 package com.sourthwind.repository;
 
 import com.sourthwind.entity.Admin;
+import org.apache.ibatis.annotations.Param;
 
 /**
  * @Description
@@ -8,5 +9,5 @@ import com.sourthwind.entity.Admin;
  * @create 2021-01-20 18:30
  */
 public interface AdminRepository {
-    public Admin login(String username, String password);
+    public Admin login(@Param("username") String username, @Param("password") String password);
 }
