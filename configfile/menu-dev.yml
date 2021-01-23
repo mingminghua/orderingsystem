@@ -2,7 +2,7 @@ server:
   port: 8020
 spring:
   application:
-    name: menu
+    name: menu-dev
   datasource:
     name: orderingsystem
     url: jdbc:mysql://localhost:3306/orderingsystem?characterEncoding=UTF-8&serverTimezone=GMT
@@ -16,4 +16,4 @@ eureka:
     prefer-ip-address: true
 mybatis:
   mapper-locations: classpath:mapping/*.xml
-  type-aliases-package: com.southwind.entity
+  type-aliases-package: com.sourthwind.entity

@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.sourthwind.repository.MenuRepository">
-    <resultMap id="menuMap" type="Menu">
+    <resultMap id="menuMap" type="com.sourthwind.entity.Menu">
         <id property="id" column="mid"/>
         <result property="name" column="mname"/>
         <result property="author" column="author"/>
         <result property="price" column="price"/>
         <result property="flavor" column="flavor"/>
         <!-- 映射 type -->
-        <association property="type" javaType="Type">
+        <association property="type" javaType="com.sourthwind.entity.Type">
             <id property="id" column="tid"/>
             <result property="name" column="tname"/>
         </association>
@@ -22,7 +22,7 @@
         select count(*) from t_menu;
     </select>
 
-    <insert id="save" parameterType="Menu">
+    <insert id="save" parameterType="com.sourthwind.entity.Menu">
         insert into t_menu(name,price,flavor,tid) values(#{name},#{price},#{flavor},#{type.id})
     </insert>
 
@@ -30,7 +30,7 @@
         select id mid,name mname,price,flavor,tid from t_menu where id = #{id}
     </select>
 
-    <update id="update" parameterType="Menu">
+    <update id="update" parameterType="com.sourthwind.entity.Menu">
         update t_menu set name = #{name},price = #{price},flavor = #{flavor},tid = #{type.id} where id = #{id}
     </update>
 

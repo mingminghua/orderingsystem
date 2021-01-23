@@ -1,5 +1,9 @@
 package com.sourthwind.repository;
 
+import com.sourthwind.entity.Type;
+
+import java.util.List;
+
 /**
  * @Description
  * @auther Ming

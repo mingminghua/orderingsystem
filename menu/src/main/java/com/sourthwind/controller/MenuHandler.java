@@ -1,10 +1,14 @@
 package com.sourthwind.controller;
 
+import com.sourthwind.entity.Menu;
 import com.sourthwind.entity.MenuVO;
+import com.sourthwind.entity.Type;
+import com.sourthwind.repository.MenuRepository;
 import com.sourthwind.repository.TypeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 /**
  * @Description
