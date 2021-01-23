@@ -5,8 +5,8 @@ spring:
       label: master #Git 仓库分支名
       profile: dev
       discovery:
-        enabled: true
         serviceId: configserver #连接的配置中心名称
+        enabled: true
   application:
     name: configserver
 eureka:

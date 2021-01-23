@@ -13,6 +13,7 @@
         <module>configserver</module>
         <module>account</module>
         <module>menu</module>
+        <module>order</module>
     </modules>
 
     <properties>

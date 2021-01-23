@@ -1,6 +1,5 @@
 server:
   port: 8888
-
 spring:
   application:
     name: configserver
@@ -12,12 +11,19 @@ spring:
           searchPaths: configfile #仓库路径
           username: mingminghua #Git 仓库用户名
           password: huamingming12 #Git 仓库密码
-      label: master #仓库的分支
+      #label: master #仓库的分支
+      label: master
+
+  #        native:
+#          search-locations:file:///C:/Users/Adminstrator/IdeaProjects/orderingsystem/configfile
+  profiles:
     bus:
       trace:
         enable: true
+#    active: native
 eureka:
   client:
-    serviceUrl:
+    service-url:
       defaultZone: http://localhost:8761/eureka/
+
 
