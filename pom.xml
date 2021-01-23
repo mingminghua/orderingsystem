@@ -12,6 +12,7 @@
         <module>registrycenter</module>
         <module>configserver</module>
         <module>account</module>
+        <module>menu</module>
     </modules>
 
     <properties>

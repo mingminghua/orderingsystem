@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.southwind.repository.AdminRepository">
+<mapper namespace="com.sourthwind.repository.AdminRepository">
+
     <select id="login" resultType="com.sourthwind.entity.Admin">
         select * from t_admin where username = #{param1} and password = #{param2}
+    </select>
+    <select id="getOne" resultType="com.sourthwind.entity.Admin">
+        select * from t_admin where id = #{param1}
     </select>
 </mapper>

@@ -52,4 +52,11 @@ public class AccountHandler {
         }
         return result;
     }
+    @GetMapping("/getOne/{id}")
+    public Account getOne(@PathVariable("id") long id){
+        Account account = null;
+        Admin admin = adminRepository.getOne(id);
+        account = admin;
+        return account;
+    }
 }

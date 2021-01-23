@@ -22,6 +22,8 @@ public interface AdminRepository {
      */
     public Admin login(@Param("username") String username, @Param("password") String password);
 
+    public Admin getOne(@Param("id") Long id);
+
     @Select("SELECT * FROM t_admin")
     @Results({
             @Result(property = "username",  column = "username"),
